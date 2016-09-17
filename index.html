@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style type="text/css">
+    .cards-container {
+        padding: 100px 0 30px 0;
+    }
+    .card {
+        position: relative;
+        overflow: visible;
+        border-top: 3px solid #fff;
+        transition: margin 0.2s;
+        z-index: 1;
+    }
+    .card.active {
+        margin: -10px -22px -10px -22px;
+        z-index: 2;
+    }
+    #card1 {
+        border-top-color: #d81b60;
+    }
+    #card2 {
+        border-top-color: #3949ab;
+    }
+    #card3 {
+        border-top-color: #ff8f00;
+    }
+    .card .icon-container {
+        position: absolute;
+        top: -35px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+    .card.active .icon-container {
+        top: -43px;
+    }
+    .card .icon-container .icon {
+        padding: 20px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        font-size: 50px;
+        color: #fff;
+        box-shadow: 0 5px 8px rgba(0,0,0,0.25);
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        transition: all 0.2s ease;
+    }
+    .card.active .icon-container .icon {
+        padding: 22px;
+        font-size: 60px;
+    }
+    .card#card1 .icon-container .icon {
+        background-color: #d81b60;
+    }
+    .card#card2 .icon-container .icon {
+        background-color: #3949ab;
+    }
+    .card#card3 .icon-container .icon {
+        background-color: #ff8f00;
+    }
+    .card .text {
+        padding: 80px 20px 30px;
+        text-align: center;
+    }
+    .card.active .text {
+        padding: 80px 25px 60px;
+        transition: all 0.2s ease;
+    }
+    .card .text .title {
+        font-size: 25px;
+        font-weight: 300;
+        margin: 0 0 10px 0;
+        transition: all 0.2s ease;
+    }
+    .card.active .text .title {
+        font-size: 30px;
+    }
+    .card .text .description {
+        font-weight: 300;
+        line-height: 28px;
+        font-size: 15px;
+        transition: all 0.2s ease;
+    }
+    .card.active .text .description {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row cards-container">
+                <div class="col m4">
+                    <div class="card" id="card1">
+                        <div class="icon-container">
+                            <span class="icon">
+                                <i class="fa fa-connectdevelop"></i>
+                            </span>
+                        </div>
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="description">Awesome description of the product which is itself super awesome!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m4">
+                    <div class="card" id="card2">
+                        <div class="icon-container">
+                            <span class="icon">
+                                <i class="fa fa-heartbeat"></i>
+                            </span>
+                        </div>
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="description">Awesome description of the product which is itself super awesome!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m4">
+                    <div class="card" id="card3">
+                        <div class="icon-container">
+                            <span class="icon">
+                                <i class="fa fa-mars-double"></i>
+                            </span>
+                        </div>
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="description">Awesome description of the product which is itself super awesome!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $('.card').mouseover(function(){
+            $('.card.active').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</body>
+</html>
